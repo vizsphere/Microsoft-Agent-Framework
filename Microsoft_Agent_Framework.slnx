@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="0_Configs/_Configs.csproj" />
+  <Project Path="Agent_Framework_Web/Agent_Framework_Web.csproj" Id="d01785bd-4975-43f6-b06c-25a39c51e350" />
+</Solution>

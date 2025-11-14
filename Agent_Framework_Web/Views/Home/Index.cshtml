@@ -1,0 +1,47 @@
+﻿@model Agent_Framework_Web.Models.PromptModel
+@{
+    ViewData["Title"] = "Agent Framework Web";
+}
+<h5>Microsoft Agent Framework</h5>
+<hr />
+<br />
+<div class="row">
+    <div class="col-6">
+        <form method="post">
+            <div class="form-group">
+                <div>
+                    <span class="label label-primary">Enter your prompt</span>
+                    <input asp-for="Prompt"  maxlength="90" class="form-control" />
+                </div>
+
+                <br />
+                <div class="form-group">
+                    <textarea asp-for="@Model.Response"
+                              name="@Model.Response" rows="30">@Model.Response</textarea>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-6">
+        <p> Original prompt : @Model.Prompt </p>
+    </div>
+
+</div>
+<style>
+    textarea {
+        width: 100%;
+        height: 450px;
+        padding: 12px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8fcfd;
+        font-size: 16px;
+        resize: none;
+    }
+</style>
