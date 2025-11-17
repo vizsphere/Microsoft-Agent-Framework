@@ -16,7 +16,15 @@ namespace _Configs.Env
             string _orgId = "";
             string _embedding = "";
 
-            if (settingOption == AISource.Azure)
+            if(settingOption == AISource.Azure)
+            {
+                _key = Environment.GetEnvironmentVariable("AZURE_APIKEY", EnvironmentVariableTarget.User) ?? "";
+                _model = Environment.GetEnvironmentVariable("AZURE_MODEL", EnvironmentVariableTarget.User) ?? "";
+                _endpoint = Environment.GetEnvironmentVariable("AZURE_ENDPOINT", EnvironmentVariableTarget.User) ?? "";
+                _orgId = Environment.GetEnvironmentVariable("AZURE_ORGID", EnvironmentVariableTarget.User) ?? "";
+                _embedding = Environment.GetEnvironmentVariable("AZURE_EMBEDDING", EnvironmentVariableTarget.User) ?? "";
+            }
+            else if (settingOption == AISource.AzureOpenAI)
             {
                 _key = Environment.GetEnvironmentVariable("AZURE_OPEN_AI_APIKEY", EnvironmentVariableTarget.User) ?? "";
                 _model = Environment.GetEnvironmentVariable("AZURE_OPEN_AI_MODEL", EnvironmentVariableTarget.User) ?? "";

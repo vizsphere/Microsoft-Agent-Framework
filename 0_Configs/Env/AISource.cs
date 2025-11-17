@@ -9,6 +9,7 @@ namespace _Configs.Env
     public enum AISource
     {
         Azure = 1,
-        OpenAI = 2
+        AzureOpenAI = 2,
+        OpenAI = 3
     }
 }
