@@ -21,6 +21,8 @@ try
     {
         var agent = client.GetChatClient(model).CreateAIAgent();
 
+        client.GetChatClient(model).
+
         Console.WriteLine("Q:");
 
         string userPrompt = Console.ReadLine();
