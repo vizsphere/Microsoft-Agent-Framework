@@ -5,7 +5,8 @@ using OpenAI;
 using System.ClientModel;
 
 // Read environment variables
-(string model, string endpoint, string apiKey, string embedding, string orgId) = EnvService.ReadFromEnvironment(AISource.Azure);
+IEnvironmentService _service = new AzureOpenAIEnvironmentService();
+(string model, string endpoint, string apiKey, string embedding, string orgId) =  _service.GetEnvironmentVariables(); 
 
 var client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apiKey));
 
