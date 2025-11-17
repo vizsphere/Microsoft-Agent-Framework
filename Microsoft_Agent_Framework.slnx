@@ -1,4 +1,9 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+    <File Path="readme.txt" />
+  </Folder>
   <Project Path="0_Configs/_Configs.csproj" />
+  <Project Path="Agent_Framework_Console/Agent_Framework_Console.csproj" Id="e94e5403-989d-439d-bba9-b2136cd43c61" />
   <Project Path="Agent_Framework_Web/Agent_Framework_Web.csproj" Id="d01785bd-4975-43f6-b06c-25a39c51e350" />
 </Solution>

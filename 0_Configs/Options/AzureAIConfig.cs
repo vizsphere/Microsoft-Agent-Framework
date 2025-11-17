@@ -20,5 +20,8 @@ namespace _Configs.Options
 
         [Required]
         public string Deployment { get; set; } = null;
+
+        [Required]
+        public string AgentId { get; set; } = null;
     }
 }
