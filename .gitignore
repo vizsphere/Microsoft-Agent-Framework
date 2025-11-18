@@ -10,3 +10,8 @@
 /Agent_Framework_Console/obj
 /Agent_Framework_Console/bin/Debug/net9.0
 /readme.txt
+/Agent_Framework/Agent_Framework.csproj
+/Agent_Framework/Program.cs
+/Agent_Framework/bin/Debug/net10.0
+/Agent_Framework/obj/Debug
+/Agent_Framework/obj
