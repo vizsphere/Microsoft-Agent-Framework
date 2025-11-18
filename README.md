@@ -29,3 +29,6 @@ https://www.robertdeveen.com/aws/2025/11/12/Microsoft-Agent-Framework-with-Amazo
 https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-types/bedrock-agent?pivots=programming-language-csharp
 https://devblogs.microsoft.com/semantic-kernel/integration-of-aws-bedrock-agents-in-semantic-kernel/
 https://github.com/microsoft/semantic-kernel/tree/main/dotnet/samples/GettingStartedWithAgents/BedrockAgent
+https://aws.amazon.com/blogs/dotnet/getting-started-with-amazon-bedrock-in-net-applications/
+
+Amazon Bedrock using Microsoft Agent Framework C#
