@@ -26,3 +26,6 @@ https://learn.microsoft.com/en-us/dotnet/api/overview/azure/ai.agents.persistent
 
 ### Amazon Bedrock models supported in Microsoft Agent Framework
 https://www.robertdeveen.com/aws/2025/11/12/Microsoft-Agent-Framework-with-Amazon-Bedrock.html
+https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-types/bedrock-agent?pivots=programming-language-csharp
+https://devblogs.microsoft.com/semantic-kernel/integration-of-aws-bedrock-agents-in-semantic-kernel/
+https://github.com/microsoft/semantic-kernel/tree/main/dotnet/samples/GettingStartedWithAgents/BedrockAgent
