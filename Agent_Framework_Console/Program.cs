@@ -5,7 +5,7 @@ using OpenAI;
 using System.ClientModel;
 
 // Read environment variables
-IEnvironmentService _service = new AzureOpenAIEnvironmentService();
+IEnvironmentService _service = new AzureEnvironmentService();
 (string model, string endpoint, string apiKey, string embedding, string orgId) =  _service.GetEnvironmentVariables(); 
 
 var client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(apiKey));
@@ -36,6 +36,7 @@ try
 
         // Await the agent's response using the correct method
         var response = await agent.RunAsync(messages);
+
 
         // Output the response content
         Console.WriteLine(response.Text);
