@@ -24,6 +24,11 @@ https://github.com/microsoft/agent-framework
 https://learn.microsoft.com/en-us/dotnet/api/overview/azure/ai.agents.persistent-readme?view=azure-dotnet
 
 
+## AgentFramewok 
+https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview
+https://github.com/microsoft/agent-framework
+
+
 ### Amazon Bedrock models supported in Microsoft Agent Framework
 https://www.robertdeveen.com/aws/2025/11/12/Microsoft-Agent-Framework-with-Amazon-Bedrock.html
 https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-types/bedrock-agent?pivots=programming-language-csharp
