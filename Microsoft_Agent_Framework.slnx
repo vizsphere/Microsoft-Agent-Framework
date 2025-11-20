@@ -7,4 +7,5 @@
   <Project Path="Agent_Framework/Agent_Framework.csproj" Id="186f45f2-a89a-4f57-9d84-64ffa46c7b9b" />
   <Project Path="Agent_Framework_Console/Agent_Framework_Console.csproj" Id="e94e5403-989d-439d-bba9-b2136cd43c61" />
   <Project Path="Agent_Framework_Web/Agent_Framework_Web.csproj" Id="d01785bd-4975-43f6-b06c-25a39c51e350" />
+  <Project Path="MCP_Server/MCP_Server.csproj" Id="80f851a4-bab3-4e5d-88f4-2f9ce380059e" />
 </Solution>
