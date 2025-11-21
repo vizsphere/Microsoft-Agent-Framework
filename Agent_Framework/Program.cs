@@ -5,15 +5,22 @@ using Azure.Identity;
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
+using OpenTelemetry;
+using OpenTelemetry.Trace;
 using System.ComponentModel;
+using System.Text.Json;
 
 ///<summary>
 ///https://learn.microsoft.com/en-us/agent-framework/tutorials/agents/function-tools-approvals?pivots=programming-language-csharp
 ///</summary>
 
 #pragma warning disable MEAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
-
 (string model, string endpoint, string apiKey, string embedding, string orgId) = new AzureOpenAIEnvironmentService().GetEnvironmentVariables();
+
+using var traceProvider = Sdk.CreateTracerProviderBuilder()
+    .AddSource("agent-telemetry")
+    .AddConsoleExporter()
+    .Build();
 
 AIFunction speakerFunction = AIFunctionFactory.Create(GetSpeaker);
 
@@ -25,7 +32,10 @@ AIAgent agent = new AzureOpenAIClient(
     .GetChatClient(model)
     .CreateAIAgent(
         instructions: "You are a helpful assistant.",
-        tools: [AIFunctionFactory.Create(GetSpeaker), approveRequiredSpeakerFunction]);
+        tools: [AIFunctionFactory.Create(GetSpeaker), approveRequiredSpeakerFunction])
+    .AsBuilder()
+    .UseOpenTelemetry(sourceName: "agent-telemetry")
+    .Build();
 
 AgentThread thread = agent.GetNewThread();
 
@@ -46,7 +56,7 @@ Console.WriteLine($"Function Approval Requests:{requestContent.FunctionCall.Name
 
 var approvalMessage = new ChatMessage(ChatRole.User, [requestContent.CreateResponse(true)]);
 
-Console.WriteLine(await agent.RunAsync(approvalMessage, thread));
+Console.WriteLine(await agent.RunAsync(approvalMessage));
 
 AIAgent visionAgent = new AzureOpenAIClient(
     new Uri(endpoint),
@@ -60,7 +70,7 @@ ChatMessage chatMessage = new(ChatRole.User, [
         new UriContent("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg", "image/jpeg")
     ]);
 
-Console.WriteLine(await visionAgent.RunAsync(chatMessage, thread));
+Console.WriteLine(await visionAgent.RunAsync(chatMessage));
 
 
 [Description("Get random speaker information.")]
