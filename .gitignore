@@ -16,3 +16,5 @@
 /Agent_Framework/obj/Debug
 /Agent_Framework/obj
 /MCP_Server/obj
+/Agent_With_Chat_HistoryStorage/obj
+/Agent_With_Chat_HistoryStorage/bin/Debug/net10.0
