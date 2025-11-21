@@ -12,6 +12,10 @@
 		<PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-preview.251114.1" />
 		<PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-preview.251114.1" />
 		<PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="10.0.0-preview.1.25560.10" />
+		<PackageReference Include="Microsoft.SemanticKernel.Connectors.InMemory" Version="1.67.1-preview" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\0_Configs\_Configs.csproj" />
 	</ItemGroup>
 
 </Project>
