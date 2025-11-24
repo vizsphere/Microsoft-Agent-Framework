@@ -18,3 +18,5 @@
 /MCP_Server/obj
 /Agent_With_Chat_HistoryStorage/obj
 /Agent_With_Chat_HistoryStorage/bin/Debug/net10.0
+/Agents_Workflow/bin/Debug/net10.0
+/Agents_Workflow/obj
