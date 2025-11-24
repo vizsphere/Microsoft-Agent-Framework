@@ -18,7 +18,7 @@ AIAgent workflowAgent = workflow.AsAgent();
 
 AgentThread thread = workflowAgent.GetNewThread();
 
-Console.WriteLine(await workflowAgent.RunAsync("Hello", thread));
+Console.WriteLine(await workflowAgent.RunAsync("Greeting users!", thread));
 
 await persistentAgentsClient.Administration.DeleteAgentAsync(frenchAgent.Id);
 await persistentAgentsClient.Administration.DeleteAgentAsync(englishAgent.Id);
