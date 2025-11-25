@@ -21,6 +21,8 @@ using System.Text.Json;
 /// https://learn.microsoft.com/en-us/agent-framework/integrations/ag-ui/?pivots=programming-language-csharp
 /// https://github.com/ag-ui-protocol/ag-ui?tab=readme-ov-file
 /// 
+/// Copilotkit 
+/// https://docs.copilotkit.ai/microsoft-agent-framework
 ///</summary>
 
 #pragma warning disable MEAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
