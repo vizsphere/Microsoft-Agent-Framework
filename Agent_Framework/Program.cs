@@ -14,6 +14,9 @@ using System.Text.Json;
 ///https://learn.microsoft.com/en-us/agent-framework/tutorials/agents/function-tools-approvals?pivots=programming-language-csharp
 ///Git hub
 ///https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/HostedAgents/AgentWithHostedMCP/README.md
+///
+/// Agent UI: 
+/// https://learn.microsoft.com/en-us/agent-framework/integrations/ag-ui/?pivots=programming-language-csharp
 ///</summary>
 
 #pragma warning disable MEAI001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
